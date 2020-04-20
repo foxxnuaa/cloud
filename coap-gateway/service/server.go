@@ -329,12 +329,14 @@ func (server *Server) tlsEnabled() bool {
 func (server *Server) Serve() error {
 	server.setupCoapServer()
 	server.coapServer.Listener = server.listener
-	return server.coapServer.ActivateAndServe()
+	err := server.coapServer.ActivateAndServe()
+	server.listener.Close()
+	return err
 }
 
 // Shutdown turn off server.
 func (server *Server) Shutdown() error {
 	err := server.coapServer.Shutdown()
-	server.listener.Close()
+
 	return err
 }
