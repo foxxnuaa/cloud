@@ -16,7 +16,7 @@ require (
 	github.com/go-ocf/sdk v0.0.0-20200409112144-f306e826ae33
 	github.com/gofrs/uuid v3.2.0+incompatible
 	github.com/gogo/protobuf v1.3.1
-	github.com/golang/protobuf v1.3.5
+	github.com/golang/protobuf v1.4.2
 	github.com/golang/snappy v0.0.2-0.20190904063534-ff6b7dc882cf
 	github.com/google/go-github v17.0.0+incompatible
 	github.com/google/uuid v1.1.1
